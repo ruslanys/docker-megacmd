@@ -36,7 +36,7 @@ docker run -d --name megacmd --restart always \
 
 ```
 docker exec -it megacmd bash
-cat /proc/sys/kernel/random/uuid /etc/machine-id
+cat /proc/sys/kernel/random/uuid > /etc/machine-id
 ```
 
 ## Commands Execution
