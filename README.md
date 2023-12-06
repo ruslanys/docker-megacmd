@@ -11,7 +11,7 @@
 ## Start a Daemon
 
 Because of the issue [#623](https://github.com/meganz/MEGAcmd/issues/623)
-we need to have a unique UUID at `/etc/machine-id`. Otherwise, `mega-sync` will not work.
+we need to have an unique UUID at `/etc/machine-id`. Otherwise, `mega-sync` will not work.
 
 We have 2 options: 
 
