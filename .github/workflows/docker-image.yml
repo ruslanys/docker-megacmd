@@ -15,4 +15,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag ruslanys/megacmd
+
+    - uses: actions/checkout@v4
+    - name: Publish the Docker image
+      env:
+        HUB_TOKEN: ${{ secrets.HUB_TOKEN }}
+      run: |
+        docker login -u ruslanys -p $HUB_TOKEN
+        docker push ruslanys/megacmd
